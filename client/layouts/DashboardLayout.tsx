@@ -18,9 +18,28 @@ import {
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Bell, LayoutDashboard, ClipboardList, BarChart2, Folder, Mail, Settings, Sparkles } from "lucide-react";
+import {
+  Bell,
+  LayoutDashboard,
+  ClipboardList,
+  BarChart2,
+  Folder,
+  Mail,
+  Settings,
+  Sparkles,
+} from "lucide-react";
 
-function NavItem({ to, icon: Icon, label, badge }: { to: string; icon: React.ElementType; label: string; badge?: string }) {
+function NavItem({
+  to,
+  icon: Icon,
+  label,
+  badge,
+}: {
+  to: string;
+  icon: React.ElementType;
+  label: string;
+  badge?: string;
+}) {
   const location = useLocation();
   const isActive = location.pathname === to;
   return (
@@ -45,7 +64,9 @@ export default function DashboardLayout() {
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/90 text-primary-foreground shadow">
               <Sparkles className="h-4 w-4" />
             </div>
-            <span className="text-base font-extrabold tracking-tight">Didasco</span>
+            <span className="text-base font-extrabold tracking-tight">
+              Didasco
+            </span>
           </div>
         </SidebarHeader>
         <SidebarContent>
@@ -53,7 +74,11 @@ export default function DashboardLayout() {
             <SidebarGroupLabel>Menu</SidebarGroupLabel>
             <SidebarMenu>
               <NavItem to="/" icon={LayoutDashboard} label="Overview" />
-              <NavItem to="/assignments" icon={ClipboardList} label="Assignments" />
+              <NavItem
+                to="/assignments"
+                icon={ClipboardList}
+                label="Assignments"
+              />
               <NavItem to="/reports" icon={BarChart2} label="Reports" />
               <NavItem to="/files" icon={Folder} label="File Storage" />
               <NavItem to="/inbox" icon={Mail} label="Inbox" badge="7" />
@@ -63,7 +88,9 @@ export default function DashboardLayout() {
         </SidebarContent>
         <SidebarSeparator />
         <SidebarFooter>
-          <div className="px-2 text-xs text-muted-foreground">© {new Date().getFullYear()} Didasco</div>
+          <div className="px-2 text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Didasco
+          </div>
         </SidebarFooter>
       </Sidebar>
 
@@ -72,7 +99,10 @@ export default function DashboardLayout() {
           <div className="flex h-14 items-center gap-3 px-4">
             <SidebarTrigger />
             <div className="flex-1 max-w-xl">
-              <Input placeholder="Search from courses..." className="h-9 rounded-full" />
+              <Input
+                placeholder="Search from courses..."
+                className="h-9 rounded-full"
+              />
             </div>
             <Button variant="ghost" size="icon" aria-label="notifications">
               <Bell className="h-5 w-5" />

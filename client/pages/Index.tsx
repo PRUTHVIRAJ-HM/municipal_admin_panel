@@ -1,13 +1,28 @@
 import { useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Calendar } from "@/components/ui/calendar";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import Gauge from "@/components/Gauge";
 import { BookOpen, Palette, Clapperboard } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 export default function Index() {
   const hoursData = useMemo(
@@ -25,8 +40,12 @@ export default function Index() {
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Hello Pruthviraj 👋</h1>
-          <p className="text-muted-foreground">Let’s learn something new today!</p>
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Hello Pruthviraj 👋
+          </h1>
+          <p className="text-muted-foreground">
+            Let’s learn something new today!
+          </p>
         </div>
         <div className="hidden sm:flex items-center gap-2">
           <Badge className="rounded-full">College Student</Badge>
@@ -36,7 +55,9 @@ export default function Index() {
       <div className="grid gap-4 md:grid-cols-3">
         <Card className="border-0 shadow-sm ring-1 ring-black/5">
           <CardHeader className="flex-row items-center gap-2">
-            <div className="rounded-md bg-amber-100 p-2 text-amber-700"><BookOpen /></div>
+            <div className="rounded-md bg-amber-100 p-2 text-amber-700">
+              <BookOpen />
+            </div>
             <CardTitle className="text-base">Basic: HTML and CSS</CardTitle>
           </CardHeader>
           <CardContent className="pt-0 text-sm text-muted-foreground flex items-center justify-between">
@@ -46,7 +67,9 @@ export default function Index() {
         </Card>
         <Card className="border-0 shadow-sm ring-1 ring-black/5">
           <CardHeader className="flex-row items-center gap-2">
-            <div className="rounded-md bg-emerald-100 p-2 text-emerald-700"><Palette /></div>
+            <div className="rounded-md bg-emerald-100 p-2 text-emerald-700">
+              <Palette />
+            </div>
             <CardTitle className="text-base">Branding Design</CardTitle>
           </CardHeader>
           <CardContent className="pt-0 text-sm text-muted-foreground flex items-center justify-between">
@@ -56,7 +79,9 @@ export default function Index() {
         </Card>
         <Card className="border-0 shadow-sm ring-1 ring-black/5">
           <CardHeader className="flex-row items-center gap-2">
-            <div className="rounded-md bg-indigo-100 p-2 text-indigo-700"><Clapperboard /></div>
+            <div className="rounded-md bg-indigo-100 p-2 text-indigo-700">
+              <Clapperboard />
+            </div>
             <CardTitle className="text-base">Motion Design</CardTitle>
           </CardHeader>
           <CardContent className="pt-0 text-sm text-muted-foreground flex items-center justify-between">
@@ -79,8 +104,18 @@ export default function Index() {
                   <XAxis dataKey="month" tickLine={false} axisLine={false} />
                   <YAxis tickLine={false} axisLine={false} />
                   <Tooltip cursor={{ fill: "hsl(var(--muted))" }} />
-                  <Bar dataKey="study" stackId="a" fill="hsl(var(--primary))" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="exams" stackId="a" fill="hsl(var(--accent))" radius={[6, 6, 0, 0]} />
+                  <Bar
+                    dataKey="study"
+                    stackId="a"
+                    fill="hsl(var(--primary))"
+                    radius={[6, 6, 0, 0]}
+                  />
+                  <Bar
+                    dataKey="exams"
+                    stackId="a"
+                    fill="hsl(var(--accent))"
+                    radius={[6, 6, 0, 0]}
+                  />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -122,7 +157,9 @@ export default function Index() {
                     <TableCell>#{r.rank}</TableCell>
                     <TableCell>{r.name}</TableCell>
                     <TableCell className="text-right">{r.course}</TableCell>
-                    <TableCell className="text-right text-emerald-600">{r.point.toLocaleString()}</TableCell>
+                    <TableCell className="text-right text-emerald-600">
+                      {r.point.toLocaleString()}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -136,7 +173,11 @@ export default function Index() {
               <CardTitle className="text-base">December 2021</CardTitle>
             </CardHeader>
             <CardContent className="pt-0">
-              <Calendar mode="single" selected={new Date()} className="rounded-md border" />
+              <Calendar
+                mode="single"
+                selected={new Date()}
+                className="rounded-md border"
+              />
             </CardContent>
           </Card>
 
