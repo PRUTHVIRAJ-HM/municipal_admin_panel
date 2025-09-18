@@ -71,7 +71,7 @@ export default function FiltersPanel() {
             <div className="flex flex-wrap gap-2">
               <Badge className="cursor-pointer">High Priority in Ward 3</Badge>
               <Badge className="cursor-pointer">New this week</Badge>
-              <Badge className="cursor-pointer">Pending > 7 days</Badge>
+              <Badge className="cursor-pointer">Pending &gt; 7 days</Badge>
             </div>
           </div>
         </PopoverContent>
