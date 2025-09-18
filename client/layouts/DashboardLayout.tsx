@@ -67,7 +67,7 @@ export default function DashboardLayout() {
               <Sparkles className="h-4 w-4" />
             </div>
             <span className="text-base font-extrabold tracking-tight">
-              Didasco
+              ResolveX
             </span>
           </div>
         </SidebarHeader>
@@ -87,11 +87,6 @@ export default function DashboardLayout() {
           </SidebarGroup>
         </SidebarContent>
         <SidebarSeparator />
-        <SidebarFooter>
-          <div className="px-2 text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Didasco
-          </div>
-        </SidebarFooter>
       </Sidebar>
 
       <SidebarInset>
