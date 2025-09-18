@@ -1,6 +1,13 @@
 import FiltersPanel from "@/components/FiltersPanel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 
@@ -28,14 +35,24 @@ export default function MapPage() {
               {/* Legend */}
               <div className="absolute left-4 top-4 rounded-md border bg-card/95 p-3 text-xs shadow-sm">
                 <div className="mb-2 font-medium">Legend</div>
-                <div className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Low</div>
-                <div className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-500" /> High</div>
-                <div className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-rose-500" /> Critical</div>
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500" /> Low
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-amber-500" /> High
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-rose-500" /> Critical
+                </div>
               </div>
               {/* Toggles */}
               <div className="absolute right-4 top-4 flex items-center gap-4 rounded-md border bg-card/95 p-3 shadow-sm">
-                <label className="flex items-center gap-2 text-sm"><span>Clusters</span> <Switch /></label>
-                <label className="flex items-center gap-2 text-sm"><span>Heatmap</span> <Switch /></label>
+                <label className="flex items-center gap-2 text-sm">
+                  <span>Clusters</span> <Switch />
+                </label>
+                <label className="flex items-center gap-2 text-sm">
+                  <span>Heatmap</span> <Switch />
+                </label>
               </div>
             </div>
           </CardContent>
@@ -59,14 +76,21 @@ export default function MapPage() {
                 {[
                   { id: "#1024", cat: "Roads", status: "Assigned", sla: "2d" },
                   { id: "#1025", cat: "Power", status: "Submitted", sla: "1d" },
-                  { id: "#1026", cat: "Sanitation", status: "In-Progress", sla: "6h" },
+                  {
+                    id: "#1026",
+                    cat: "Sanitation",
+                    status: "In-Progress",
+                    sla: "6h",
+                  },
                   { id: "#1027", cat: "Water", status: "Resolved", sla: "—" },
                 ].map((r) => (
                   <TableRow key={r.id}>
                     <TableCell>{r.id}</TableCell>
                     <TableCell>{r.cat}</TableCell>
                     <TableCell>
-                      <Badge variant="secondary" className="rounded-full">{r.status}</Badge>
+                      <Badge variant="secondary" className="rounded-full">
+                        {r.status}
+                      </Badge>
                     </TableCell>
                     <TableCell className="text-right">{r.sla}</TableCell>
                   </TableRow>

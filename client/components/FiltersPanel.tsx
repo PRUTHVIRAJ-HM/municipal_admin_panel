@@ -1,8 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Filter, SlidersHorizontal } from "lucide-react";
 
@@ -15,7 +25,9 @@ export default function FiltersPanel() {
       </div>
       <Input placeholder="Quick search…" className="h-9 w-48" />
       <Select>
-        <SelectTrigger className="h-9 w-40"><SelectValue placeholder="Category" /></SelectTrigger>
+        <SelectTrigger className="h-9 w-40">
+          <SelectValue placeholder="Category" />
+        </SelectTrigger>
         <SelectContent>
           <SelectItem value="sanitation">Sanitation</SelectItem>
           <SelectItem value="roads">Roads</SelectItem>
@@ -25,7 +37,9 @@ export default function FiltersPanel() {
         </SelectContent>
       </Select>
       <Select>
-        <SelectTrigger className="h-9 w-36"><SelectValue placeholder="Status" /></SelectTrigger>
+        <SelectTrigger className="h-9 w-36">
+          <SelectValue placeholder="Status" />
+        </SelectTrigger>
         <SelectContent>
           <SelectItem value="submitted">Submitted</SelectItem>
           <SelectItem value="acknowledged">Acknowledged</SelectItem>
@@ -36,7 +50,9 @@ export default function FiltersPanel() {
         </SelectContent>
       </Select>
       <Select>
-        <SelectTrigger className="h-9 w-36"><SelectValue placeholder="Urgency" /></SelectTrigger>
+        <SelectTrigger className="h-9 w-36">
+          <SelectValue placeholder="Urgency" />
+        </SelectTrigger>
         <SelectContent>
           <SelectItem value="low">Low</SelectItem>
           <SelectItem value="medium">Medium</SelectItem>
@@ -45,7 +61,9 @@ export default function FiltersPanel() {
         </SelectContent>
       </Select>
       <Select>
-        <SelectTrigger className="h-9 w-32"><SelectValue placeholder="Ward" /></SelectTrigger>
+        <SelectTrigger className="h-9 w-32">
+          <SelectValue placeholder="Ward" />
+        </SelectTrigger>
         <SelectContent>
           <SelectItem value="1">Ward 1</SelectItem>
           <SelectItem value="2">Ward 2</SelectItem>
@@ -55,7 +73,9 @@ export default function FiltersPanel() {
       </Select>
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline" className="h-9 gap-2"><CalendarIcon className="h-4 w-4" /> Date range</Button>
+          <Button variant="outline" className="h-9 gap-2">
+            <CalendarIcon className="h-4 w-4" /> Date range
+          </Button>
         </PopoverTrigger>
         <PopoverContent align="start" className="p-2">
           <Calendar mode="range" numberOfMonths={2} />
@@ -63,7 +83,9 @@ export default function FiltersPanel() {
       </Popover>
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="outline" className="h-9 gap-2"><SlidersHorizontal className="h-4 w-4" /> Presets</Button>
+          <Button variant="outline" className="h-9 gap-2">
+            <SlidersHorizontal className="h-4 w-4" /> Presets
+          </Button>
         </PopoverTrigger>
         <PopoverContent className="w-64 text-sm">
           <div className="space-y-2">

@@ -1,5 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 
@@ -12,11 +19,20 @@ export default function Routing() {
         </CardHeader>
         <CardContent className="space-y-3 pt-0">
           {[
-            { name: "Sanitation → Sanitation Dept.", note: "Keyword: garbage, waste" },
+            {
+              name: "Sanitation → Sanitation Dept.",
+              note: "Keyword: garbage, waste",
+            },
             { name: "Potholes → Roads Dept.", note: "Model: v2.1, conf. 0.87" },
-            { name: "Power Outage → Power Utility", note: "Model: v2.1, conf. 0.91" },
+            {
+              name: "Power Outage → Power Utility",
+              note: "Model: v2.1, conf. 0.91",
+            },
           ].map((r, i) => (
-            <div key={i} className="flex items-start justify-between rounded-md border p-3">
+            <div
+              key={i}
+              className="flex items-start justify-between rounded-md border p-3"
+            >
               <div>
                 <div className="font-medium">{r.name}</div>
                 <div className="text-xs text-muted-foreground">{r.note}</div>
@@ -48,8 +64,14 @@ export default function Routing() {
                   <TableCell>#{1200 + i}</TableCell>
                   <TableCell>ML v2.1</TableCell>
                   <TableCell>Roads</TableCell>
-                  <TableCell><Badge variant="secondary" className="rounded-full">0.{8 + (i % 2)}</Badge></TableCell>
-                  <TableCell><Badge className="rounded-full">Manual</Badge></TableCell>
+                  <TableCell>
+                    <Badge variant="secondary" className="rounded-full">
+                      0.{8 + (i % 2)}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <Badge className="rounded-full">Manual</Badge>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

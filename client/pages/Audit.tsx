@@ -24,7 +24,9 @@ export default function Audit() {
           </div>
         ))}
         <Separator />
-        <div className="text-sm text-muted-foreground">All actions are immutable and timestamped (UTC).</div>
+        <div className="text-sm text-muted-foreground">
+          All actions are immutable and timestamped (UTC).
+        </div>
       </CardContent>
     </Card>
   );
