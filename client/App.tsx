@@ -8,6 +8,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Assignments from "./pages/Assignments";
+import Reports from "./pages/Reports";
+import Files from "./pages/Files";
+import Inbox from "./pages/Inbox";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -18,9 +24,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route element={<DashboardLayout />}>
+            <Route path="/" element={<Index />} />
+            <Route path="/assignments" element={<Assignments />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/files" element={<Files />} />
+            <Route path="/inbox" element={<Inbox />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
