@@ -21,12 +21,14 @@ import { Button } from "@/components/ui/button";
 import {
   Bell,
   LayoutDashboard,
-  ClipboardList,
   BarChart2,
-  Folder,
-  Mail,
   Settings,
   Sparkles,
+  MapPin,
+  KanbanSquare,
+  Route,
+  History,
+  MessageSquare,
 } from "lucide-react";
 
 function NavItem({
@@ -74,14 +76,12 @@ export default function DashboardLayout() {
             <SidebarGroupLabel>Menu</SidebarGroupLabel>
             <SidebarMenu>
               <NavItem to="/" icon={LayoutDashboard} label="Overview" />
-              <NavItem
-                to="/assignments"
-                icon={ClipboardList}
-                label="Assignments"
-              />
+              <NavItem to="/map" icon={MapPin} label="Map" />
               <NavItem to="/reports" icon={BarChart2} label="Reports" />
-              <NavItem to="/files" icon={Folder} label="File Storage" />
-              <NavItem to="/inbox" icon={Mail} label="Inbox" badge="7" />
+              <NavItem to="/tasks" icon={KanbanSquare} label="Tasks" />
+              <NavItem to="/routing" icon={Route} label="Routing" />
+              <NavItem to="/audit" icon={History} label="Audit" />
+              <NavItem to="/comms" icon={MessageSquare} label="Comms" />
               <NavItem to="/settings" icon={Settings} label="Settings" />
             </SidebarMenu>
           </SidebarGroup>
