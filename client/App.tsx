@@ -9,10 +9,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Assignments from "./pages/Assignments";
 import Reports from "./pages/Reports";
-import Files from "./pages/Files";
-import Inbox from "./pages/Inbox";
+import MapPage from "./pages/Map";
+import Tasks from "./pages/Tasks";
+import Routing from "./pages/Routing";
+import Audit from "./pages/Audit";
+import Comms from "./pages/Comms";
 import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
@@ -26,10 +28,12 @@ const App = () => (
         <Routes>
           <Route element={<DashboardLayout />}>
             <Route path="/" element={<Index />} />
-            <Route path="/assignments" element={<Assignments />} />
+            <Route path="/map" element={<MapPage />} />
             <Route path="/reports" element={<Reports />} />
-            <Route path="/files" element={<Files />} />
-            <Route path="/inbox" element={<Inbox />} />
+            <Route path="/tasks" element={<Tasks />} />
+            <Route path="/routing" element={<Routing />} />
+            <Route path="/audit" element={<Audit />} />
+            <Route path="/comms" element={<Comms />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Route>
